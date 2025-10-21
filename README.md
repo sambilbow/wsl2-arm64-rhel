@@ -36,13 +36,13 @@ sudo mv ubi10-rootfs.tar /mnt/c/Users/<WINDOWSUSER>/Downloads/wsl
 
 ### 2. Import to WSL2
 In PowerShell:
-```ps
+```sh
 wsl --import <DISTRONAME> "C:\Users\<WINDOWSUSER>\AppData\Local\Packages\<DISTRONAME>" .\ubi10-rootfs.tar
 ```
 
 ### 3. Configure User and WSL Settings
 In PowerShell:
-```ps
+```sh
 wsl -d <DISTRONAME>
 ```
 
@@ -63,7 +63,7 @@ exit
 ```
 
 ### 4. Restart WSL2
-```ps
+```sh
 wsl --terminate <DISTRONAME>
 ```
 
@@ -72,7 +72,7 @@ wsl --terminate <DISTRONAME>
 2. Get your activation key [here](https://console.redhat.com/insights/connector/activation-keys) and organization ID from your profile
 
 3. In PowerShell, open your WSL2 RHEL instance:
-```ps
+```sh
 wsl -d <DISTRONAME>
 ```
 
