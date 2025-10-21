@@ -1,6 +1,6 @@
-# RHEL for ARM64 on WSL2
+# RHEL for ARM64 on WSL2 (EXPERIMENTAL)
 
-> **Note**: This seems to be the only way to get RHEL running on WSL for ARM devices, as Red Hat doesn't provide official ARM WSL images.
+> **Note**: This seems to be the only way to get RHEL running on WSL for ARM devices, as Red Hat doesn't provide official ARM WSL images. Systemd doesn't seem to work well
 
 ## Prerequisites
 - Windows 11 ARM64 device
@@ -92,3 +92,10 @@ After verifying your WSL distribution is set up and registered, you may want to 
 
 This step is optional but recommended to keep your workspace clean.
 
+### 7. Configuration
+
+```sh
+sudo dnf makecache
+sudo dnf makecache timer
+sudo echo "keepcache=1" >> /etc/dnf/dnf.conf
+```
